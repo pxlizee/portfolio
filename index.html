@@ -10,12 +10,24 @@
 </head>
 <body>
 
+    <div class="background-video-container">
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="video/hero-bg.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header class="main-header">
+    <nav class="nav">
+        <a href="#" class="logo">[Nama Kamu]</a>
+        <ul class="nav-links">
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#projects">Proyek</a></li>
+            <li><a href="#contact" id="contact-link">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
     <section class="hero-section">
-        <div class="video-container">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="video/hero-bg.mp4" type="video/mp4">
-            </video>
-        </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Seni Bertemu Logika.</h1>
@@ -24,7 +36,7 @@
         </div>
     </section>
 
-    <section id="about" class="section about-section">
+    <section id="about" class="section about-section fade-in-section">
         <div class="content-wrapper">
             <div class="profile-pic-container">
                 <img src="images/profile.jpg" alt="Foto Profil" class="profile-pic">
@@ -37,7 +49,7 @@
         </div>
     </section>
 
-    <section id="projects" class="section projects-section">
+    <section id="projects" class="section projects-section fade-in-section">
         <h2 class="section-title">Pengalaman & Proyek</h2>
         <div class="project-grid">
 
@@ -78,7 +90,7 @@
         </div>
     </section>
 
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="section contact-section fade-in-section">
         <h2 class="section-title">Hubungi Saya</h2>
         <p>Tertarik untuk bekerja sama? Kirimkan saya email di **[emailkamu@contoh.com]** atau hubungi saya melalui media sosial.</p>
         <div class="social-links">
@@ -87,6 +99,7 @@
             <a href="[link ke Twitter/X]" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="[link ke platform lain]" target="_blank" aria-label="Behance/TikTok"><i class="fab fa-behance-square"></i></a>
         </div>
+        
     </section>
 
     <footer class="footer">
@@ -94,5 +107,26 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <div class="contact-popup-container" id="contact-popup">
+            <div class="popup-column">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p>[Nomor WhatsApp Kamu]</p>
+                <a href="https://wa.me/[NomorWhatsAppKamu]" target="_blank" class="popup-link">Kirim Pesan</a>
+            </div>
+            <div class="popup-column">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>[Email Kamu]</p>
+                <a href="mailto:[EmailKamu]" class="popup-link">Kirim Email</a>
+            </div>
+            <div class="popup-column">
+                <i class="fab fa-instagram"></i>
+                <h3>Instagram</h3>
+                <p>@[Username IG Kamu]</p>
+                <a href="https://www.instagram.com/[UsernameIGKamu]" target="_blank" class="popup-link">Kunjungi Profil</a>
+            </div>
+        </div>
 </body>
 </html>
