@@ -440,3 +440,84 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================= */
+/* Aturan CSS untuk Tampilan Mobile (Responsif) */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    /* Penyesuaian Body & Header */
+    body {
+        padding-top: 5rem; /* Sesuaikan padding atas jika header lebih tinggi */
+    }
+
+    .nav {
+        padding: 0.5rem 1rem; /* Perkecil padding di navigasi */
+    }
+
+    .logo {
+        font-size: 1.3rem; /* Perkecil ukuran logo */
+    }
+
+    .nav-links li {
+        margin-left: 1rem; /* Kurangi jarak antar menu */
+    }
+
+    /* Perkecil font di hero section */
+    .hero-content h1 {
+        font-size: 2.5rem; /* Dari 4rem */
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Dari 1.5rem */
+    }
+
+    /* Penyesuaian Section Umum */
+    .section {
+        padding: 3rem 1rem; /* Kurangi padding horizontal agar tidak terlalu mepet */
+        margin: 1.5rem auto;
+    }
+
+    .section-title {
+        font-size: 2rem; /* Dari 2.5rem */
+    }
+
+    /* Penyesuaian Bagian "Tentang Saya" */
+    .profile-pic {
+        width: 150px; /* Perkecil foto profil */
+        height: 150px;
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Sedikit perkecil teks deskripsi */
+    }
+    
+    /* Perbaikan untuk Pop-Up Kontak */
+    .contact-popup-container {
+        width: 90%; /* Agar pop-up tidak terlalu lebar di layar kecil */
+        padding: 2rem 1.5rem; /* Kurangi padding di dalam pop-up */
+        gap: 1.5rem;
+    }
+
+    .popup-column {
+        padding: 1rem; /* Kurangi padding di setiap kolom pop-up */
+    }
+}
+
+/* Aturan tambahan untuk layar yang sangat kecil */
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column; /* Susun logo dan menu ke bawah */
+        gap: 0.5rem;
+    }
+
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    body {
+        padding-top: 7rem; /* Beri ruang lebih karena header lebih tinggi */
+    }
+}
