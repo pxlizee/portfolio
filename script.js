@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Fungsi 1: Smooth scrolling untuk navigasi
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]:not(#contact-link)').forEach(anchor =>  {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
