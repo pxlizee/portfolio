@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cocok jika Anda ingin durasi animasi pasti.
     setTimeout(() => {
         preloader.classList.add('hidden');
-    }, 2000); // 2000 milidetik = 2 detik
+    }, 2200); // 2000 milidetik = 2 detik
 
     /*
     // Opsi 2 (REKOMENDASI): Sembunyikan setelah semua konten web selesai dimuat
@@ -17,6 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     */
 });
+
+const video = document.querySelector('.background-video');
+    const videoControlBtn = document.getElementById('video-control-btn');
+
+    if (video && videoControlBtn) {
+        videoControlBtn.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                videoControlBtn.classList.remove('paused');
+            } else {
+                video.pause();
+                videoControlBtn.classList.add('paused');
+            }
+        });
+    }
 document.addEventListener('DOMContentLoaded', () => {
 
     // Fungsi 1: Smooth scrolling untuk navigasi (kecuali link kontak)

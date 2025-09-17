@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.75s ease, visibility 0.75s ease; /* Transisi untuk menghilang */
+    transition: opacity 1s ease, visibility 1s ease; /* Transisi untuk menghilang */
 }
 
 .preloader-text {
@@ -213,7 +213,7 @@ body {
 /* ----------------------------------------- */
 .section {
     padding: 5rem 2rem;
-    max-width: 1100px;
+    max-width: 960px;
     margin: 3rem auto;
     text-align: center;
     border-radius: 15px;
@@ -453,9 +453,53 @@ body {
 
     .contact-popup-container {
         grid-template-columns: 1fr;
-        width: 90%;
-        padding: 2rem;
+        width: 90%; /* Tetap 90% untuk layar sangat kecil */
+        max-width: 450px; /* Batasi lebar maksimum agar tidak terlalu lebar */
+        padding: 2rem 1.5rem; /* Sesuaikan padding */
+        max-height: 90vh; /* Batasi tinggi maksimum */
+        overflow-y: auto; /* Buat bisa di-scroll jika konten panjang */
     }
+}
+/* ========================================= */
+/* TOMBOL KONTROL VIDEO                      */
+/* ========================================= */
+#video-control-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--text-light);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+#video-control-btn:hover {
+    background-color: var(--primary-accent);
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+/* Logika untuk menampilkan ikon yang benar */
+#video-control-btn .fa-play {
+    display: none; /* Sembunyikan ikon play secara default */
+}
+
+#video-control-btn.paused .fa-pause {
+    display: none; /* Jika tombol memiliki kelas .paused, sembunyikan ikon pause */
+}
+
+#video-control-btn.paused .fa-play {
+    display: inline-block; /* Jika tombol memiliki kelas .paused, tampilkan ikon play */
 }
 
 @media (max-width: 480px) {
