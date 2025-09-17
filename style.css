@@ -8,6 +8,37 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: transparent; /* Diperlukan agar video terlihat */
+    padding-top: 5rem;
+}
+
+/* Latar belakang video di seluruh halaman */
+.background-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
 /* Gaya untuk Header */
 .main-header {
     width: 100%;
@@ -15,9 +46,9 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.75); /* Sedikit lebih transparan */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px); /* Efek blur sudah ada, disesuaikan sedikit */
     transition: background-color 0.3s ease;
 }
 
@@ -57,37 +88,6 @@
     color: #007bff;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: transparent;
-    padding-top: 5rem;
-}
-
-/* Latar belakang video di seluruh halaman */
-.background-video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.background-video {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-
 /* Hero Section */
 .hero-section {
     position: relative;
@@ -98,10 +98,9 @@ body {
     text-align: center;
     color: white;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay gelap agar teks terbaca */
 }
 
-/* Hero Content & Overlay (sudah ada di hero-section) */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -139,7 +138,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Bagian umum */
+/* Bagian umum dengan efek blur */
 .section {
     position: relative;
     z-index: 1;
@@ -149,10 +148,10 @@ body {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.75); /* Transparansi ditambahkan */
+    backdrop-filter: blur(10px); /* Efek blur ditambahkan */
 }
 
-/* Sisa CSS lama */
 .section-title {
     font-size: 2.5rem;
     font-weight: 600;
@@ -171,8 +170,9 @@ body {
     border-radius: 2px;
 }
 
+/* Bagian Tentang Saya */
 .about-section {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: transparent; /* Hapus warna spesifik agar mewarisi dari .section */
     padding: 6rem 2rem;
 }
 
@@ -206,8 +206,9 @@ body {
     color: #666;
 }
 
+/* Bagian Proyek */
 .projects-section {
-    background-color: rgba(240, 242, 245, 0.8);
+    background-color: transparent; /* Hapus warna spesifik agar mewarisi dari .section */
 }
 
 .project-grid {
@@ -300,9 +301,14 @@ body {
 
 /* Bagian kontak */
 .contact-section {
-    background-color: rgba(51, 51, 51, 0.8);
-    color: #fff;
+    background-color: transparent; /* Hapus warna spesifik agar mewarisi dari .section */
+    color: #333; /* Ubah warna teks agar kontras dengan latar belakang terang */
     padding: 6rem 2rem;
+}
+
+.contact-section .section-title,
+.contact-section p {
+    color: #333;
 }
 
 .social-links {
@@ -310,7 +316,7 @@ body {
 }
 
 .social-links a {
-    color: #fff;
+    color: #333; /* Ubah warna ikon agar terlihat */
     text-decoration: none;
     font-size: 2rem;
     margin: 0 1rem;
@@ -321,21 +327,14 @@ body {
     color: #007bff;
 }
 
-/* Footer */
+/* Footer dengan efek blur */
 .footer {
-    background-color: rgba(34, 34, 34, 0.8);
+    background-color: rgba(34, 34, 34, 0.6); /* Lebih transparan */
     color: #aaa;
     text-align: center;
     padding: 1.5rem 0;
     font-size: 0.9rem;
-}
-
-/* Media Queries untuk responsif */
-@media (min-width: 768px) {
-    .content-wrapper {
-        flex-direction: row;
-        text-align: left;
-    }
+    backdrop-filter: blur(10px); /* Efek blur */
 }
 
 /* Efek Transisi Saat Scroll */
@@ -357,7 +356,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang gelap semi-transparan */
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
@@ -375,7 +374,8 @@ body {
 
 /* Gaya untuk pop-up itu sendiri */
 .contact-popup-container {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.8); /* Transparansi ditambahkan */
+    backdrop-filter: blur(10px); /* Efek blur ditambahkan */
     padding: 3rem;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -391,7 +391,7 @@ body {
 }
 
 .popup-column {
-    background-color: #f8f9fa;
+    background-color: rgba(248, 249, 250, 0.8); /* Sedikit transparan juga */
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
@@ -435,80 +435,75 @@ body {
     background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
-    .contact-popup-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* ========================================= */
 /* Aturan CSS untuk Tampilan Mobile (Responsif) */
 /* ========================================= */
 @media (max-width: 768px) {
 
     /* Penyesuaian Body & Header */
-    body {
-        padding-top: 5rem; /* Sesuaikan padding atas jika header lebih tinggi */
-    }
-
     .nav {
-        padding: 0.5rem 1rem; /* Perkecil padding di navigasi */
+        padding: 0.5rem 1rem;
     }
 
     .logo {
-        font-size: 1.3rem; /* Perkecil ukuran logo */
+        font-size: 1.3rem;
     }
 
     .nav-links li {
-        margin-left: 1rem; /* Kurangi jarak antar menu */
+        margin-left: 1rem;
     }
 
     /* Perkecil font di hero section */
     .hero-content h1 {
-        font-size: 2.5rem; /* Dari 4rem */
-        line-height: 1.2;
+        font-size: 2.5rem;
     }
 
     .hero-content p {
-        font-size: 1.2rem; /* Dari 1.5rem */
+        font-size: 1.2rem;
     }
 
     /* Penyesuaian Section Umum */
     .section {
-        padding: 3rem 1rem; /* Kurangi padding horizontal agar tidak terlalu mepet */
+        padding: 3rem 1rem;
         margin: 1.5rem auto;
     }
 
     .section-title {
-        font-size: 2rem; /* Dari 2.5rem */
+        font-size: 2rem;
     }
 
     /* Penyesuaian Bagian "Tentang Saya" */
+    .content-wrapper {
+        flex-direction: column; /* Ini sudah default, tapi dipertegas */
+        text-align: center;
+    }
+    
     .profile-pic {
-        width: 150px; /* Perkecil foto profil */
+        width: 150px;
         height: 150px;
     }
 
     .about-text p {
-        font-size: 1rem; /* Sedikit perkecil teks deskripsi */
+        font-size: 1rem;
     }
     
     /* Perbaikan untuk Pop-Up Kontak */
     .contact-popup-container {
-        width: 90%; /* Agar pop-up tidak terlalu lebar di layar kecil */
-        padding: 2rem 1.5rem; /* Kurangi padding di dalam pop-up */
+        width: 90%;
+        padding: 2rem 1.5rem;
         gap: 1.5rem;
+        grid-template-columns: 1fr; /* Susun ke bawah */
     }
 
     .popup-column {
-        padding: 1rem; /* Kurangi padding di setiap kolom pop-up */
+        padding: 1rem;
     }
 }
 
 /* Aturan tambahan untuk layar yang sangat kecil */
 @media (max-width: 480px) {
     .nav {
-        flex-direction: column; /* Susun logo dan menu ke bawah */
+        flex-direction: column;
         gap: 0.5rem;
     }
 
