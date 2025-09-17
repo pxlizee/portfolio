@@ -503,7 +503,16 @@ body {
 }
 
 @media (max-width: 480px) {
-    .nav { flex-direction: column; gap: 1rem; padding-bottom: 1rem; }
-    body { padding-top: 7.5rem; }
-    .hero-content h1 { font-size: 2.2rem; }
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem; /* Padding yang lebih seimbang */
+        align-items: center; /* KUNCI: Membuat semua item di tengah */
+    }
+    .nav-links {
+        padding-left: 0; /* Menghapus padding default dari list */
+    }
+    body { 
+        padding-top: 8rem; /* Sedikit disesuaikan dengan tinggi header baru */
+    }
 }
