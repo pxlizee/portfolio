@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Nama Kamu] | Portfolio</title>
+    <title>[Nama Kamu] | Content Creator & Videographer</title>
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="preloader">
+        <div class="preloader-text">Hola</div>
+    </div>
+
     <div class="background-video-container">
         <video autoplay muted loop playsinline class="background-video">
             <source src="video/hero-bg.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
         </video>
     </div>
 
@@ -26,111 +31,106 @@
         </nav>
     </header>
 
-    <section class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Seni Bertemu Logika.</h1>
-            <p>Saya [Nama Kamu], seorang Content Creator & Videographer dengan latar belakang IT.</p>
-            <a href="#about" class="hero-btn">Tentang Saya</a>
-        </div>
-    </section>
-
-    <section id="about" class="section about-section fade-in-section">
-        <div class="content-wrapper">
-            <div class="profile-pic-container">
-                <img src="images/profile.jpg" alt="Foto Profil" class="profile-pic">
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Seni Bertemu Logika.</h1>
+                <p>Saya [Nama Kamu], seorang Content Creator & Videographer dengan fondasi teknis yang kuat.</p>
+                <a href="#projects" class="hero-btn">Lihat Karya Saya</a>
             </div>
-            <div class="about-text">
-                <h2 class="section-title">Tentang Saya</h2>
-                <p>Saya adalah perpaduan unik antara <strong>kreativitas visual</strong> dan <strong>kemampuan teknis</strong>. Berbekal ilmu dari <strong>jurusan Teknik Informatika</strong>, saya mampu menciptakan konten yang tidak hanya indah secara visual, tetapi juga strategis dan dioptimalkan secara teknis.</p>
-                <p>Saya memiliki pengalaman sebagai <strong>Content Creator</strong> di perusahaan [Nama Perusahaan Sebelumnya] dan juga aktif sebagai <strong>Freelance Photo/Videographer</strong>.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="section projects-section fade-in-section">
-        <h2 class="section-title">Pengalaman & Proyek</h2>
-        <div class="project-grid">
-            <div class="project-card">
-    <img src="images/proyek-perusahaan.jpg" alt="Proyek Content Creator" class="project-image">
-    <div class="project-info">
-        <h3>Pengembangan Konten Digital Perusahaan</h3>
-        <p class="role-date">Content Creator | [Nama Perusahaan] | [Bulan/Tahun Mulai] - [Bulan/Tahun Selesai]</p>
-        
-        <ul>
-            <li>Memimpin produksi konten video dari konsep hingga pasca-produksi, berhasil meningkatkan <strong><em>engagement rate</em> media sosial sebesar [angka]%</strong>.</li>
-            <li>Menerapkan strategi <strong>SEO on-page & riset kata kunci</strong> untuk mengoptimalkan artikel blog dan deskripsi video, menaikkan <strong><em>traffic</em> organik sebesar [angka]%</strong>.</li>
-        </ul>
-
-        <div class="project-tags">
-            <span>Content Strategy</span>
-            <span>SEO</span>
-            <span>Video Production</span>
-            <span>Google Analytics</span>
-        </div>
-        
-        <a href="[LINK_KE_HASIL_KERJA]" target="_blank" class="project-btn">Lihat Hasil Kerja</a>
-    </div>
-</div>
-            </div>
-            <div class="project-card">
-                <img src="images/placeholder-project.jpg" alt="Proyek Fotografi" class="project-image">
-                <div class="project-info">
-                    <h3>Freelance Photo/Videographer</h3>
-                    <p class="role-date">[Bulan/Tahun Mulai] - Saat ini</p>
-                    <ul>
-                        <li>Bertanggung jawab penuh atas <strong>manajemen data aset digital</strong>, termasuk backup cloud dan alur kerja penyimpanan yang efisien.</li>
-                        <li>Menggunakan <strong>software profesional</strong> seperti Adobe Premiere Pro dan Lightroom untuk editing, serta mengelola <strong>aliran data mentah</strong> (RAW).</li>
-                    </ul>
-                    <div class="project-tags">
-                        <span>#Videography</span>
-                        <span>#Photography</span>
-                        <span>#PostProduction</span>
-                    </div>
-                    <a href="#" class="btn-link">Lihat Galeri</a>
+        <section id="about" class="section about-section fade-in-section">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="content-wrapper">
+                <img src="images/profile.jpg" alt="Foto Profil [Nama Kamu]" class="profile-pic">
+                <div class="about-text">
+                    <h3>Perpaduan Kreativitas & Teknologi</h3>
+                    <p>Lulusan Teknik Informatika yang beralih ke dunia kreatif. Saya menggabungkan kemampuan analisis dan pemecahan masalah dengan hasrat untuk bercerita melalui visual. Saya percaya konten terbaik lahir dari data yang akurat dan eksekusi yang indah.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section contact-section fade-in-section">
-        <h2 class="section-title">Hubungi Saya</h2>
-        <p>Tertarik untuk bekerja sama? Kirimkan saya email di <strong>[emailkamu@contoh.com]</strong> atau hubungi saya melalui media sosial.</p>
-        <div class="social-links">
-            <a href="[link ke LinkedIn]" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="[link ke Instagram]" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="[link ke Twitter/X]" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="[link ke platform lain]" target="_blank" aria-label="Behance/TikTok"><i class="fab fa-behance-square"></i></a>
-        </div>
-    </section>
+        <section id="projects" class="section projects-section fade-in-section">
+            <h2 class="section-title">Pengalaman & Proyek</h2>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <img src="images/proyek-perusahaan.jpg" alt="Proyek Content Creator" class="project-image">
+                    <div class="project-info">
+                        <h3>Digital Content Development</h3>
+                        <p class="role-date">Content Creator | [Nama Perusahaan] | [Tahun Mulai] - [Tahun Selesai]</p>
+                        <ul>
+                            <li>Mengelola strategi dan produksi konten video yang berhasil meningkatkan <strong>engagement media sosial sebesar [angka]%</strong>.</li>
+                            <li>Mengoptimalkan artikel dan video menggunakan <strong>riset kata kunci SEO</strong>, menaikkan <strong>traffic organik sebesar [angka]%</strong>.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span>Content Strategy</span>
+                            <span>SEO</span>
+                            <span>Video Production</span>
+                        </div>
+                        <a href="[LINK_KE_HASIL_KERJA]" target="_blank" class="project-btn">Lihat Hasil Kerja</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/proyek-freelance.jpg" alt="Proyek Fotografi Freelance" class="project-image">
+                    <div class="project-info">
+                        <h3>Fotografi & Videografi Freelance</h3>
+                        <p class="role-date">Freelance | 2023 - Saat ini</p>
+                        <ul>
+                            <li>Melayani lebih dari <strong>20+ klien</strong> untuk kebutuhan dokumentasi acara, profil perusahaan, dan konten produk.</li>
+                            <li>Bertanggung jawab penuh atas proses pasca-produksi, mulai dari editing hingga color grading.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span>Photography</span>
+                            <span>Videography</span>
+                            <span>Post-Production</span>
+                        </div>
+                        <a href="[LINK_KE_GALERI_FOTO/VIDEO]" target="_blank" class="project-btn">Lihat Galeri</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section fade-in-section">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <p>Tertarik untuk berkolaborasi atau memiliki proyek yang ingin didiskusikan?</p>
+            <div class="social-links">
+                <a href="[Link LinkedIn Anda]" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="[Link Instagram Anda]" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="[Link Behance/Platform Lain]" target="_blank" aria-label="Behance"><i class="fab fa-behance-square"></i></a>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <p>&copy; 2025 [Nama Kamu]. Hak Cipta Dilindungi.</p>
+        <p>&copy; 2025 [Nama Kamu]. Didesain dengan penuh semangat.</p>
     </footer>
-
-    <script src="script.js"></script>
 
     <div class="contact-popup-overlay" id="contact-popup-overlay">
         <div class="contact-popup-container">
             <div class="popup-column">
                 <i class="fab fa-whatsapp"></i>
                 <h3>WhatsApp</h3>
-                <p>[Nomor WhatsApp Kamu]</p>
-                <a href="https://wa.me/[NomorWhatsAppKamu]" target="_blank" class="popup-link">Kirim Pesan</a>
+                <p>[+62 8xx-xxxx-xxxx]</p>
+                <a href="https://wa.me/[NomorWhatsAppFormat62]" target="_blank" class="popup-link">Kirim Pesan</a>
             </div>
             <div class="popup-column">
                 <i class="fas fa-envelope"></i>
                 <h3>Email</h3>
-                <p>[Email Kamu]</p>
-                <a href="mailto:[EmailKamu]" class="popup-link">Kirim Email</a>
+                <p>[email@anda.com]</p>
+                <a href="mailto:[email@anda.com]" class="popup-link">Kirim Email</a>
             </div>
             <div class="popup-column">
                 <i class="fab fa-instagram"></i>
                 <h3>Instagram</h3>
-                <p>@[Username IG Kamu]</p>
-                <a href="https://www.instagram.com/[UsernameIGKamu]" target="_blank" class="popup-link">Kunjungi Profil</a>
+                <p>@[Username IG Anda]</p>
+                <a href="https://www.instagram.com/[Username IG Anda]" target="_blank" class="popup-link">Kunjungi Profil</a>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,7 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- KODE BARU UNTUK PRELOADER ---
+    const preloader = document.getElementById('preloader');
 
-    // Fungsi 1: Smooth scrolling untuk navigasi
-    document.querySelectorAll('a[href^="#"]:not(#contact-link)').forEach(anchor =>  {
+    // Opsi 1: Sembunyikan setelah waktu tertentu (misal: 2 detik)
+    // Cocok jika Anda ingin durasi animasi pasti.
+    setTimeout(() => {
+        preloader.classList.add('hidden');
+    }, 2000); // 2000 milidetik = 2 detik
+
+    /*
+    // Opsi 2 (REKOMENDASI): Sembunyikan setelah semua konten web selesai dimuat
+    // Ini cara yang lebih profesional. Hapus atau beri komentar pada Opsi 1 jika menggunakan ini.
+    window.addEventListener('load', () => {
+        preloader.classList.add('hidden');
+    });
+    */
+});
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Fungsi 1: Smooth scrolling untuk navigasi (kecuali link kontak)
+    document.querySelectorAll('a[href^="#"]:not(#contact-link)').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
@@ -12,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Fungsi 2: Animasi scroll (Intersection Observer)
+    // Fungsi 2: Animasi scroll-in (Intersection Observer)
     const sections = document.querySelectorAll('.fade-in-section');
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
@@ -23,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.2
+        threshold: 0.15
     });
 
     sections.forEach(section => {
@@ -36,17 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactPopupContainer = document.querySelector('.contact-popup-container');
 
     if (contactLink && contactPopupOverlay) {
+        // Tampilkan pop-up
         contactLink.addEventListener('click', (e) => {
             e.preventDefault();
             contactPopupOverlay.classList.add('show');
         });
 
-        // Menutup pop-up saat mengklik di luar area pop-up
+        // Sembunyikan pop-up saat mengklik area overlay
         contactPopupOverlay.addEventListener('click', (e) => {
-            if (!contactPopupContainer.contains(e.target)) {
+            if (e.target === contactPopupOverlay) {
                 contactPopupOverlay.classList.remove('show');
             }
         });
     }
-
 });
