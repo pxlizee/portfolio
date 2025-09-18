@@ -152,10 +152,35 @@ body {
     color: var(--text-muted);
     font-weight: 400;
     transition: color 0.3s ease;
+    /* KODE BARU DI BAWAH INI */
+    position: relative; /* Diperlukan untuk posisi garis bawah */
+    padding-bottom: 5px; /* Memberi sedikit ruang untuk garis bawah */
+}
+
+/* Membuat elemen garis bawah virtual */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Awalnya garis tidak terlihat */
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--primary-accent); /* Menggunakan warna aksen tema */
+    transition: width 0.3s ease; /* Efek animasi saat lebar berubah */
+    -webkit-transition: width 0.3s ease;
+}
+
+/* Saat link di-hover, lebarkan garisnya menjadi 100% */
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+    background: var(--primary-accent);
 }
 
 .nav-links a:hover {
     color: var(--primary-accent);
+    text-shadow: 0 0 10px var(--primary-accent); /* Tambahkan baris ini */
 }
 
 
@@ -190,6 +215,26 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* ========================================= */
+/* EFEK KETIKAN (TYPING EFFECT)              */
+/* ========================================= */
+.typing-effect {
+    display: inline-block; /* Membuat kontainer sesuai lebar teks */
+    border-right: 3px solid var(--primary-accent); /* Ini adalah kursor kita */
+    animation: blink .75s step-end infinite;
+    white-space: nowrap; /* Mencegah teks turun baris saat diketik */
+    overflow: hidden; /* Menyembunyikan teks asli sebelum animasi */
+}
+
+/* Animasi untuk membuat kursor berkedip */
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-accent); }
+}
+
+/* Hentikan kedipan setelah selesai (opsional) */
+
 
 .hero-btn {
     display: inline-block;

@@ -29,11 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 typingElement.textContent += textToType.charAt(i);
                 i++;
                 setTimeout(typeWriter, 120); // Kecepatan mengetik (dalam milidetik)
-            } else {
-                // Opsional: Hentikan kursor berkedip setelah selesai
-                setTimeout(() => {
-                    typingElement.classList.add('done');
-                }, 1000); // Tunggu 1 detik sebelum kursor berhenti berkedip
             }
         }
         
