@@ -18,6 +18,29 @@ document.addEventListener('DOMContentLoaded', () => {
     */
 });
 
+ const typingElement = document.querySelector('.typing-effect');
+    if (typingElement) {
+        const textToType = typingElement.textContent;
+        typingElement.textContent = ''; // Kosongkan teks awal
+        let i = 0;
+
+        function typeWriter() {
+            if (i < textToType.length) {
+                typingElement.textContent += textToType.charAt(i);
+                i++;
+                setTimeout(typeWriter, 120); // Kecepatan mengetik (dalam milidetik)
+            } else {
+                // Opsional: Hentikan kursor berkedip setelah selesai
+                setTimeout(() => {
+                    typingElement.classList.add('done');
+                }, 1000); // Tunggu 1 detik sebelum kursor berhenti berkedip
+            }
+        }
+        
+        // Mulai animasi setelah preloader selesai
+        setTimeout(typeWriter, 2500); // Beri jeda sedikit setelah halaman dimuat
+    }
+
 const video = document.querySelector('.background-video');
     const videoControlBtn = document.getElementById('video-control-btn');
 
