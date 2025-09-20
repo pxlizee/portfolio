@@ -1,1 +1,111 @@
-function _0x5268(_0xdad0d2,_0x47b718){const _0x32b78b=_0x32b7();return _0x5268=function(_0x526850,_0x57e191){_0x526850=_0x526850-0x121;let _0x27213a=_0x32b78b[_0x526850];return _0x27213a;},_0x5268(_0xdad0d2,_0x47b718);}const _0x24447c=_0x5268;function _0x32b7(){const _0x344fc1=['smooth','getAttribute','forEach','2046708ZNTeor','paused','getElementById','add','active','toggle','charAt','.background-video','video-control-btn','preloader','1275395osAwxe','textContent','is-visible','.typing-effect','495oBsMjs','4778670iZErMy','show','preventDefault','querySelector','isIntersecting','hamburger-btn','length','play','319640DuVSik','1720358pmPzvR','contact-popup-overlay','classList','scrollIntoView','1477XTHPtj','pause','69PBsobu','DOMContentLoaded','contact-link','.nav-links','4996WAHOSc','15376ihICxG','href','target','click','.nav-links\x20li\x20a','addEventListener','querySelectorAll'];_0x32b7=function(){return _0x344fc1;};return _0x32b7();}(function(_0x2f309a,_0x34c9d8){const _0x1af5a7=_0x5268,_0x5803ea=_0x2f309a();while(!![]){try{const _0x167cb9=-parseInt(_0x1af5a7(0x149))/0x1+-parseInt(_0x1af5a7(0x12a))/0x2+parseInt(_0x1af5a7(0x130))/0x3*(parseInt(_0x1af5a7(0x134))/0x4)+parseInt(_0x1af5a7(0x121))/0x5+-parseInt(_0x1af5a7(0x13f))/0x6+parseInt(_0x1af5a7(0x12e))/0x7*(parseInt(_0x1af5a7(0x135))/0x8)+-parseInt(_0x1af5a7(0x14d))/0x9*(-parseInt(_0x1af5a7(0x129))/0xa);if(_0x167cb9===_0x34c9d8)break;else _0x5803ea['push'](_0x5803ea['shift']());}catch(_0x2d4001){_0x5803ea['push'](_0x5803ea['shift']());}}}(_0x32b7,0xa3e63),document['addEventListener'](_0x24447c(0x131),()=>{const _0x291c54=_0x24447c,_0x56fefb=document['getElementById'](_0x291c54(0x148));_0x56fefb&&setTimeout(()=>{const _0x337c4c=_0x291c54;_0x56fefb['classList'][_0x337c4c(0x142)]('hidden');},0x898);const _0x3db4e3=document['querySelector'](_0x291c54(0x14c));if(_0x3db4e3){const _0x40130e=_0x3db4e3['textContent'];_0x3db4e3[_0x291c54(0x14a)]='';let _0x525f43=0x0;function _0x412fe9(){const _0x28dc4b=_0x291c54;_0x525f43<_0x40130e[_0x28dc4b(0x127)]&&(_0x3db4e3[_0x28dc4b(0x14a)]+=_0x40130e[_0x28dc4b(0x145)](_0x525f43),_0x525f43++,setTimeout(_0x412fe9,0x78));}setTimeout(_0x412fe9,0x9c4);}const _0x22a6ea=document['querySelector'](_0x291c54(0x146)),_0x5bb9da=document[_0x291c54(0x141)](_0x291c54(0x147));_0x22a6ea&&_0x5bb9da&&_0x5bb9da[_0x291c54(0x13a)](_0x291c54(0x138),()=>{const _0x313bde=_0x291c54;_0x22a6ea[_0x313bde(0x140)]?(_0x22a6ea[_0x313bde(0x128)](),_0x5bb9da[_0x313bde(0x12c)]['remove'](_0x313bde(0x140))):(_0x22a6ea[_0x313bde(0x12f)](),_0x5bb9da[_0x313bde(0x12c)][_0x313bde(0x142)](_0x313bde(0x140)));});document['querySelectorAll']('a[href^=\x22#\x22]:not(#contact-link)')['forEach'](_0x1b42a9=>{const _0x41535d=_0x291c54;_0x1b42a9['addEventListener'](_0x41535d(0x138),function(_0x523144){const _0x43e52b=_0x41535d;_0x523144['preventDefault']();const _0x3cf162=this[_0x43e52b(0x13d)](_0x43e52b(0x136));document[_0x43e52b(0x124)](_0x3cf162)[_0x43e52b(0x12d)]({'behavior':_0x43e52b(0x13c)});});});const _0x1c554c=document[_0x291c54(0x13b)]('.fade-in-section'),_0x4a7aa7=new IntersectionObserver(_0x4f4cbf=>{const _0x4da0be=_0x291c54;_0x4f4cbf[_0x4da0be(0x13e)](_0xed364=>{const _0x4cb4be=_0x4da0be;_0xed364[_0x4cb4be(0x125)]&&(_0xed364[_0x4cb4be(0x137)]['classList']['add'](_0x4cb4be(0x14b)),_0x4a7aa7['unobserve'](_0xed364[_0x4cb4be(0x137)]));});},{'threshold':0.15});_0x1c554c['forEach'](_0x468d62=>{_0x4a7aa7['observe'](_0x468d62);});const _0x163a5b=document[_0x291c54(0x141)](_0x291c54(0x132)),_0x500cea=document['getElementById'](_0x291c54(0x12b));_0x163a5b&&_0x500cea&&(_0x163a5b[_0x291c54(0x13a)]('click',_0x389b76=>{const _0x2dcd10=_0x291c54;_0x389b76[_0x2dcd10(0x123)](),_0x500cea[_0x2dcd10(0x12c)][_0x2dcd10(0x142)](_0x2dcd10(0x122));}),_0x500cea['addEventListener'](_0x291c54(0x138),_0x402797=>{const _0x16622f=_0x291c54;_0x402797[_0x16622f(0x137)]===_0x500cea&&_0x500cea[_0x16622f(0x12c)]['remove'](_0x16622f(0x122));}));const _0x140687=document[_0x291c54(0x141)](_0x291c54(0x126)),_0x57bacb=document[_0x291c54(0x124)](_0x291c54(0x133)),_0x5a182c=document[_0x291c54(0x13b)](_0x291c54(0x139));_0x140687&&_0x57bacb&&(_0x140687['addEventListener'](_0x291c54(0x138),()=>{const _0x4d8a7f=_0x291c54;_0x57bacb['classList'][_0x4d8a7f(0x144)](_0x4d8a7f(0x143));}),_0x5a182c[_0x291c54(0x13e)](_0x5e90fc=>{const _0x582d8c=_0x291c54;_0x5e90fc[_0x582d8c(0x13a)](_0x582d8c(0x138),()=>{const _0x4bb3f2=_0x582d8c;_0x57bacb[_0x4bb3f2(0x12c)]['remove'](_0x4bb3f2(0x143));});}));}));
+// Menunggu seluruh konten halaman dimuat sebelum menjalankan script
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- PRELOADER ---
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Sembunyikan preloader setelah 2.2 detik
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+        }, 2200);
+    }
+
+    // --- EFEK KETIK PADA HERO SECTION ---
+    const typingEffectElement = document.querySelector('.typing-effect');
+    if (typingEffectElement) {
+        const text = typingEffectElement.textContent;
+        typingEffectElement.textContent = '';
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                typingEffectElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 120);
+            }
+        }
+        // Mulai efek ketik setelah preloader selesai
+        setTimeout(typeWriter, 2500);
+    }
+
+    // --- KONTROL VIDEO BACKGROUND ---
+    const backgroundVideo = document.querySelector('.background-video');
+    const videoControlButton = document.getElementById('video-control-btn');
+    if (backgroundVideo && videoControlButton) {
+        videoControlButton.addEventListener('click', () => {
+            if (backgroundVideo.paused) {
+                backgroundVideo.play();
+                videoControlButton.classList.remove('paused');
+            } else {
+                backgroundVideo.pause();
+                videoControlButton.classList.add('paused');
+            }
+        });
+    }
+
+    // --- SMOOTH SCROLL UNTUK NAVIGASI (Selain link Kontak) ---
+    document.querySelectorAll('a[href^="#"]:not(#contact-link)').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            document.querySelector(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // --- EFEK FADE-IN SAAT SECTION MUNCUL DI LAYAR ---
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+    const sectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    fadeInSections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    // --- POPUP KONTAK ---
+    const contactLink = document.getElementById('contact-link');
+    const contactPopup = document.getElementById('contact-popup-overlay');
+    if (contactLink && contactPopup) {
+        // Tampilkan popup saat link kontak diklik
+        contactLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            contactPopup.classList.add('show');
+        });
+        // Sembunyikan popup saat area overlay (luar popup) diklik
+        contactPopup.addEventListener('click', (e) => {
+            if (e.target === contactPopup) {
+                contactPopup.classList.remove('show');
+            }
+        });
+    }
+
+    // --- MENU HAMBURGER (SUDAH DIPERBARUI) ---
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const navMenuLinks = document.querySelectorAll('.nav-links li a'); // Ambil semua link di dalam menu
+
+    if (hamburgerBtn && navLinks) {
+        // Fungsi untuk membuka/menutup menu
+        const toggleMenu = () => {
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('menu-open'); // Menambah/menghapus class untuk overlay
+        };
+
+        hamburgerBtn.addEventListener('click', toggleMenu);
+
+        // **BARU**: Tambahkan event listener ke setiap link di menu
+        navMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Jika menu sedang terbuka, tutup menu
+                if (navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+    }
+});
