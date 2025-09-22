@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- SMOOTH SCROLL UNTUK NAVIGASI (Selain link Kontak) ---
-    document.querySelectorAll('a[href^="#"]:not(#contact-link)').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]:not(#contact-link):not(#hero-contact-btn)').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
@@ -67,19 +67,39 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionObserver.observe(section);
     });
 
-    // --- POPUP KONTAK ---
+    // --- POPUP KONTAK (SUDAH DIPERBARUI DENGAN LOGIC SCROLL LOCK) ---
     const contactLink = document.getElementById('contact-link');
     const contactPopup = document.getElementById('contact-popup-overlay');
-    if (contactLink && contactPopup) {
-        // Tampilkan popup saat link kontak diklik
-        contactLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            contactPopup.classList.add('show');
-        });
-        // Sembunyikan popup saat area overlay (luar popup) diklik
+    const heroContactBtn = document.getElementById('hero-contact-btn');
+    
+    // Fungsi untuk membuka popup
+    const openContactPopup = (e) => {
+        e.preventDefault();
+        contactPopup.classList.add('show');
+        document.body.classList.add('no-scroll'); // Kunci scroll di body
+    };
+
+    // Fungsi untuk menutup popup
+    const closeContactPopup = () => {
+        contactPopup.classList.remove('show');
+        document.body.classList.remove('no-scroll'); // Buka kembali scroll di body
+    };
+
+    if (contactPopup) {
+        // Event listener untuk link di navigasi
+        if (contactLink) {
+            contactLink.addEventListener('click', openContactPopup);
+        }
+
+        // Event listener untuk tombol di hero section
+        if (heroContactBtn) {
+            heroContactBtn.addEventListener('click', openContactPopup);
+        }
+
+        // Event listener untuk menutup popup saat area overlay diklik
         contactPopup.addEventListener('click', (e) => {
             if (e.target === contactPopup) {
-                contactPopup.classList.remove('show');
+                closeContactPopup();
             }
         });
     }
