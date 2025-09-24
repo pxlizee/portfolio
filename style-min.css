@@ -22,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    cursor: none; /* <-- TAMBAHKAN BARIS INI */
 }
 
 body {
@@ -326,7 +327,9 @@ body.no-scroll {
 .service-card:hover,
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(5, 253, 217, 0.3);
+    /* PERUBAHAN: Bayangan dibuat lebih tajam dan berwarna */
+    box-shadow: 0 0 25px rgba(5, 253, 217, 0.4), 
+                0 0 0 2px var(--primary-accent); /* Menambahkan garis luar saat hover */
 }
 
 .service-card i {
@@ -890,4 +893,19 @@ body.menu-open::before {
         cursor: pointer;
         z-index: 1001;
     }
+}
+
+/* --- BARU: ATURAN UNTUK KURSOR KUSTOM --- */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-accent);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    /* PASTIKAN BARIS INI ADA: Inilah kunci untuk centering */
+    transform: translate(-50%, -50%); 
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    /* Kita hapus transisi untuk top dan left agar lebih responsif */
 }

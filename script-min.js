@@ -1,6 +1,30 @@
 // Menunggu seluruh konten halaman dimuat sebelum menjalankan script
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- BARU: LOGIKA KURSOR KUSTOM (PERBAIKAN POSISI) ---
+const cursor = document.querySelector('.custom-cursor');
+if (cursor) {
+    document.addEventListener('mousemove', e => {
+        // KITA UBAH: JS hanya mengatur posisi top dan left
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    // Efek saat hover di atas link atau tombol (bagian ini tetap sama)
+    document.querySelectorAll('a, button, .hero-btn, .project-btn').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.width = '40px';
+            cursor.style.height = '40px';
+            cursor.style.backgroundColor = 'rgba(5, 253, 217, 0.2)';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.style.width = '20px';
+            cursor.style.height = '20px';
+            cursor.style.backgroundColor = 'transparent';
+        });
+    });
+}
+
     // --- PRELOADER ---
     const preloader = document.getElementById('preloader');
     if (preloader) {
